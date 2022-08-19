@@ -30,8 +30,8 @@ From `agarious-lepiota.data` we first learn that the columns in the dataset are 
 
 With that in mind, we can now proceed to import and clean our dataset.
 
-### Part I: Data Preparation
-Having understood the data definitions the `Mushroom Classification Part 1 - Data Preparation` notebook takes us through providing the proper column names for our data.
+# Part I: Data Preparation
+Having understood the data definitions the `Mushroom Classification Part I - Data Preparation` notebook takes us through providing the proper column names for our data.
 
 i.e. From this:
 
@@ -41,7 +41,9 @@ To this:
 
 ![image](https://user-images.githubusercontent.com/101868958/185568524-ad6f5232-9604-4dfc-a8de-53cec1cfc519.png)
 
-### Part II: Exploratory Data Analysis
+# Part II: Exploratory Data Analysis
+The `Mushroom Classification Part II - EDA` notebook documents some initial findings gleaned from exploring the dataset on hand
+
 We'll use Seaborn to do an initial exploration of the data in our dataset.
 The initial exploration of our dataset yielded the following findings:
 ![image](https://user-images.githubusercontent.com/101868958/185568766-fe07f6b4-28f4-4612-9982-b6b1df016cd1.png)
@@ -62,3 +64,20 @@ Perhaps most importantly, when plotting the countplot of mushrooms by 'cap_shape
 
 Finally, we also make an interesting observation involving the odor of mushrooms:
 Odorless (n) mushrooms have a very high chance of being edible, so in a desperate situation, looking for odorless mushrooms might be one's best bet.
+
+# Part III: Feature Engineering
+In the third notebook `Mushroom Classification Part III - Feature Engineering` we dummify our features to prepare the data for model training.
+Primarily, we used LabelEncoder from sklearn.preprocessing to encode our "class" label into a binary format where 'poisonous' = 1 and 'edible' = 0
+
+We then dummified the rest of the DataFrame by One-Hot Encoding using pd.get_dummies.
+
+The resulting DataFrame looks like this:
+
+![image](https://user-images.githubusercontent.com/101868958/185572308-ed897c2c-d2c3-4f5a-911e-c3caf6e9924d.png)
+
+# Part IV: Model Training
+In the final notebook `Mushroom Classification Part IV - Model Training` we used the popular machine learning library sklearn to train Logistic Regression and Decision Tree Classifier models to great success.
+
+The models were evaluated using their f1_scores and confusion matrices.
+
+
