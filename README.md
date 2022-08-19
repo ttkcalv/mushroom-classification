@@ -23,3 +23,9 @@ More specifically, the data is submitted by the Audobon Society Field Guide, a n
 Download the data <a href = 'https://archive.ics.uci.edu/ml/machine-learning-databases/mushroom/'>here</a>. We will need only two files:
 1. agarious-lepiota.data
 2. agarious-lepiota.names
+
+### Inspecting the data definitions
+From `agarious-lepiota.data` we first learn that the columns in the dataset are as below:
+![image](https://user-images.githubusercontent.com/101868958/185567281-edb7a7e0-8110-497a-afd1-2f52f8de9e97.png)
+
+With that in mind, we can now proceed to import and clean our dataset.
